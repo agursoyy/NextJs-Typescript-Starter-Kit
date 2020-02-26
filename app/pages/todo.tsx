@@ -30,6 +30,9 @@ const ToDo: INextPage<IProps> = (props) => {
   return (
     <div>
       <h2>ToDo List from remote restful api</h2>
+      <p>
+        <i className="icon icon-animals" style={{ fontSize: '100px' }}></i>
+      </p>
       <span>{count}</span>
       <Link route='home'>home page</Link>
     </div>

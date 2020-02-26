@@ -22,7 +22,7 @@ const nextConfig = {
         font: resolve('static/fonts/icons/[family].[type]')// required - paths of generated font files
       },
       watch: {
-        pattern: resolve('static/icons/Times.svg'), // required - watch these files to reload
+        pattern: resolve('static/icons/**/*.svg'), // required - watch these files to reload
         cwd: undefined // optional - current working dir for watching
       },
       cssTemplate // optional - the function to generate css contents
