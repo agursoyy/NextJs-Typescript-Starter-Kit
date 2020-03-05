@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Router from 'next/router';
 import nookies from 'nookies';
 import React, { Fragment } from 'react';
-
+import NProgress from 'nprogress';
 import { getURL } from '../routes';  // to get the url of the given route name.
 import Store from '../stores';
 
@@ -126,3 +126,8 @@ export default class MyApp extends App<IProps> {
 
 
 
+NProgress.configure({ showSpinner: false });
+
+Router.events.on('routeChangeStart', NProgress.start);
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
