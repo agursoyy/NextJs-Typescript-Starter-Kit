@@ -26,7 +26,8 @@ const ToDo: INextPage<IProps> = (props) => {
   const [count, setCount] = useState(0);
 
   const { api } = props.store;
-  console.log(props.store.todolist.Todos);
+  //console.log(props.store.todolist.Todos);
+  console.log('Alp');
   return (
     <div>
       <h2>ToDo List from remote restful api</h2>

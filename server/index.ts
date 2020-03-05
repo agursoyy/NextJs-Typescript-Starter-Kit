@@ -15,9 +15,7 @@ console.log(dev);
 
 const app = next({ dev, dir });
 
-const handler = routes.getRequestHandler(app);
-console.log(app);
-console.log(routes.getRequestHandler);
+const handler = routes.getRequestHandler(app);  // listen the routes and "render the pages in the app".
 
 app.prepare().then(() => {
   const server = express();

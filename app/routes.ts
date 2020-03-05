@@ -9,12 +9,14 @@ routes.add('todo', '/todolist', 'todo');
 
 export const { Link, Router } = routes;
 
+
 export const getURL = (name: string, params?: RouteParams): string =>
   routes['findAndGetUrls'](name, params).urls.as;
 
 export const isValidURL = (url: string): boolean => !!routes['match'](url).route;
 export const getRouteName = (url: string): string | null =>
   (isValidURL(url) && routes['match'](url).route.name) || null;
+
 
 export default routes;
 
