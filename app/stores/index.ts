@@ -17,7 +17,7 @@ export default class Store {
 
   [name: string]: any;
 
-  export = (): string => JSON.stringify(Stringify(this));
+  public export = (): string => Stringify(this);
 
 
   import = (data: string) =>
